@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Image Generator</title>
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+    <div class="container">
+      <h1>Imagin-AI</h1>
+      <p>
+        Write your prompt here. For example: Statue of liberty made by aliens,
+        4K quality, max resolution, hyper realistc.
+      </p>
+      <form class="form">
+        <input type="text" id="user-prompt", placeholder="Write your prompt here..." autocomplete="off">
+        <button type="button" id="generate">Generate</button>
+      </form>
+
+      <div class="result">
+        <div id="loading">Generating...</div>
+        <div id="image-grid"></div>
+      </div>
+    </div>
+
+    <div class="signature">
+      <p>Made by: Anant Dev</p>
+    </div>
+
+    <div id="particles-js"></div>
+
+    <script src="particles.js"></script>
+    <script src="app.js"></script>
+    <script src="script.js"></script>
+  </body>
+</html>

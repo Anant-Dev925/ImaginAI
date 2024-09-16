@@ -15,7 +15,7 @@ body {
     min-height: 100vh;
     margin: 0;
     padding: 0 20px;
-    overflow: hidden;
+    overflow-x: hidden;
 }
 
 .container {
@@ -33,6 +33,7 @@ body {
     -webkit-backdrop-filter: blur(7.4px);
     border: 1px solid rgba(0, 0, 0, 0.1);
     z-index: 1;
+    margin: 0 10px;
 }
 
 .container::before,
@@ -160,17 +161,18 @@ button:disabled, button[disabled] {
     bottom: 1%;
 }
 
-/* Responsive styles */
 @media (max-width: 768px) {
     .container {
-        padding: 15px 20px;
+        padding: 15px;
+        width: 90%;
+        max-width: none; /* Remove max-width constraint */
     }
 
     .form {
         flex-direction: column;
     }
 
-    button {
+    input, button {
         width: 100%;
     }
 }
@@ -180,7 +182,11 @@ button:disabled, button[disabled] {
         font-size: 12px;
     }
 
-    input {
-        padding: 0 10px;
+    #image-grid {
+        grid-template-columns: 1fr; /* Stack images in a single column */
+    }
+
+    #particles-js {
+        height: 80%;
     }
 }
